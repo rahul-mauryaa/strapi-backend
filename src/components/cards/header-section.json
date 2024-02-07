@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_cards_header_sections",
+  "info": {
+    "displayName": "Header Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "offerButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.button"
+    },
+    "toggle": {
+      "type": "boolean"
+    }
+  }
+}

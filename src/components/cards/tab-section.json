@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_cards_tab_sections",
+  "info": {
+    "displayName": "Tab Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tabsItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.blog-items"
+    }
+  }
+}

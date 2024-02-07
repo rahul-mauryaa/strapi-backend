@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_general_blog_items",
+  "info": {
+    "displayName": "Blog Items",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "artical": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::artical.artical"
+    }
+  }
+}

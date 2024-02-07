@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_general_heads",
+  "info": {
+    "displayName": "Head"
+  },
+  "options": {},
+  "attributes": {
+    "highlightedTitleText": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subDescription": {
+      "type": "text"
+    }
+  }
+}

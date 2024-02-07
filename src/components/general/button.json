@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_general_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "btnText": {
+      "type": "string"
+    },
+    "redirectTo": {
+      "type": "string"
+    }
+  }
+}
