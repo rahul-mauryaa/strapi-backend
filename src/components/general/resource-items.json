@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_general_resource_items",
+  "info": {
+    "displayName": "Resource Items",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "groupName": {
+      "type": "string"
+    },
+    "selectresource": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::resources-item.resources-item"
+    }
+  }
+}

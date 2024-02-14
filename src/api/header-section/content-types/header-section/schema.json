@@ -1,9 +1,16 @@
 {
-  "collectionName": "components_cards_header_sections",
+  "kind": "singleType",
+  "collectionName": "header_sections",
   "info": {
-    "displayName": "Header Section"
+    "singularName": "header-section",
+    "pluralName": "header-sections",
+    "displayName": "Header Section",
+    "description": ""
   },
-  "options": {},
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string"

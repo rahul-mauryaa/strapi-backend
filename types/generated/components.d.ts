@@ -1,18 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface CardsHeaderSection extends Schema.Component {
-  collectionName: 'components_cards_header_sections';
-  info: {
-    displayName: 'Header Section';
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    offerButton: Attribute.Component<'general.button'>;
-    toggle: Attribute.Boolean;
-  };
-}
-
 export interface CardsHeroSection extends Schema.Component {
   collectionName: 'components_cards_hero_sections';
   info: {
@@ -24,6 +11,19 @@ export interface CardsHeroSection extends Schema.Component {
   };
 }
 
+export interface CardsResourcesSection extends Schema.Component {
+  collectionName: 'components_cards_resources_sections';
+  info: {
+    displayName: 'Resources Section';
+    description: '';
+  };
+  attributes: {
+    mainTitle: Attribute.String;
+    groupNames: Attribute.Component<'general.resource-items', true>;
+    resourcesDateItems: Attribute.Component<'general.date-items', true>;
+  };
+}
+
 export interface CardsTabSection extends Schema.Component {
   collectionName: 'components_cards_tab_sections';
   info: {
@@ -32,6 +32,18 @@ export interface CardsTabSection extends Schema.Component {
   };
   attributes: {
     tabsItems: Attribute.Component<'general.blog-items', true>;
+  };
+}
+
+export interface CardsTechnologySection extends Schema.Component {
+  collectionName: 'components_cards_technology_sections';
+  info: {
+    displayName: 'Technology Section';
+    description: '';
+  };
+  attributes: {
+    head: Attribute.Component<'general.tabs-items'>;
+    section: Attribute.Component<'general.section-items', true>;
   };
 }
 
@@ -63,6 +75,18 @@ export interface GeneralButton extends Schema.Component {
   };
 }
 
+export interface GeneralDateItems extends Schema.Component {
+  collectionName: 'components_general_date_items';
+  info: {
+    displayName: 'Date Items';
+  };
+  attributes: {
+    date: Attribute.Date;
+    title: Attribute.String;
+    subTitle: Attribute.String;
+  };
+}
+
 export interface GeneralHead extends Schema.Component {
   collectionName: 'components_general_heads';
   info: {
@@ -73,6 +97,22 @@ export interface GeneralHead extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     subDescription: Attribute.Text;
+  };
+}
+
+export interface GeneralResourceItems extends Schema.Component {
+  collectionName: 'components_general_resource_items';
+  info: {
+    displayName: 'Resource Items';
+    description: '';
+  };
+  attributes: {
+    groupName: Attribute.String;
+    selectresource: Attribute.Relation<
+      'general.resource-items',
+      'oneToMany',
+      'api::resources-item.resources-item'
+    >;
   };
 }
 
@@ -106,12 +146,15 @@ export interface GeneralTabsItems extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'cards.header-section': CardsHeaderSection;
       'cards.hero-section': CardsHeroSection;
+      'cards.resources-section': CardsResourcesSection;
       'cards.tab-section': CardsTabSection;
+      'cards.technology-section': CardsTechnologySection;
       'general.blog-items': GeneralBlogItems;
       'general.button': GeneralButton;
+      'general.date-items': GeneralDateItems;
       'general.head': GeneralHead;
+      'general.resource-items': GeneralResourceItems;
       'general.section-items': GeneralSectionItems;
       'general.tabs-items': GeneralTabsItems;
     }

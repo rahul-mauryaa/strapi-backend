@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_cards_resources_sections",
+  "info": {
+    "displayName": "Resources Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "groupNames": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.resource-items"
+    },
+    "resourcesDateItems": {
+      "displayName": "Date Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.date-items"
+    }
+  }
+}

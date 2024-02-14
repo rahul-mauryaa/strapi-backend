@@ -362,67 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiArticalArtical extends Schema.CollectionType {
-  collectionName: 'articals';
-  info: {
-    singularName: 'artical';
-    pluralName: 'articals';
-    displayName: 'Artical';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    mainTitle: Attribute.String;
-    details: Attribute.Component<'general.tabs-items', true>;
-    image: Attribute.Media;
-    slug: Attribute.UID;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::artical.artical',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::artical.artical',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPagePage extends Schema.CollectionType {
-  collectionName: 'pages';
-  info: {
-    singularName: 'page';
-    pluralName: 'pages';
-    displayName: 'Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    shortName: Attribute.String;
-    contentSection: Attribute.DynamicZone<
-      ['cards.hero-section', 'cards.tab-section', 'cards.header-section']
-    >;
-    slug: Attribute.UID;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -829,6 +768,175 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiArticalArtical extends Schema.CollectionType {
+  collectionName: 'articals';
+  info: {
+    singularName: 'artical';
+    pluralName: 'articals';
+    displayName: 'Artical';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainTitle: Attribute.String;
+    details: Attribute.Component<'general.tabs-items', true>;
+    image: Attribute.Media;
+    slug: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::artical.artical',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::artical.artical',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHeaderSectionHeaderSection extends Schema.SingleType {
+  collectionName: 'header_sections';
+  info: {
+    singularName: 'header-section';
+    pluralName: 'header-sections';
+    displayName: 'Header Section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    offerButton: Attribute.Component<'general.button'>;
+    toggle: Attribute.Boolean;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::header-section.header-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::header-section.header-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    shortName: Attribute.String;
+    contentSection: Attribute.DynamicZone<
+      [
+        'cards.hero-section',
+        'cards.tab-section',
+        'cards.resources-section',
+        'cards.technology-section'
+      ]
+    >;
+    slug: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiResourceResource extends Schema.CollectionType {
+  collectionName: 'resources';
+  info: {
+    singularName: 'resource';
+    pluralName: 'resources';
+    displayName: 'resource';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    shortName: Attribute.String;
+    contentSection: Attribute.DynamicZone<['cards.resources-section']>;
+    slug: Attribute.UID;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::resource.resource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::resource.resource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiResourcesItemResourcesItem extends Schema.CollectionType {
+  collectionName: 'resources_items';
+  info: {
+    singularName: 'resources-item';
+    pluralName: 'resources-items';
+    displayName: 'Resources Item';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media;
+    description: Attribute.Text;
+    file: Attribute.Media;
+    fileToggle: Attribute.Boolean;
+    readMoreLink: Attribute.String;
+    readMoreToggle: Attribute.Boolean;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::resources-item.resources-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::resources-item.resources-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -839,8 +947,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::artical.artical': ApiArticalArtical;
-      'api::page.page': ApiPagePage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -849,6 +955,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::artical.artical': ApiArticalArtical;
+      'api::header-section.header-section': ApiHeaderSectionHeaderSection;
+      'api::page.page': ApiPagePage;
+      'api::resource.resource': ApiResourceResource;
+      'api::resources-item.resources-item': ApiResourcesItemResourcesItem;
     }
   }
 }

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resources_items",
+  "info": {
+    "singularName": "resources-item",
+    "pluralName": "resources-items",
+    "displayName": "Resources Item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "file": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "fileToggle": {
+      "type": "boolean"
+    },
+    "readMoreLink": {
+      "type": "string"
+    },
+    "readMoreToggle": {
+      "type": "boolean"
+    }
+  }
+}
