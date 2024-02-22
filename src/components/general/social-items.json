@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_general_social_items",
+  "info": {
+    "displayName": "Social Items",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

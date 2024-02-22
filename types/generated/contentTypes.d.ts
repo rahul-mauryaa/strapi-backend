@@ -802,6 +802,38 @@ export interface ApiArticalArtical extends Schema.CollectionType {
   };
 }
 
+export interface ApiFooterSectionFooterSection extends Schema.SingleType {
+  collectionName: 'footer_sections';
+  info: {
+    singularName: 'footer-section';
+    pluralName: 'footer-sections';
+    displayName: 'Footer Section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    description: Attribute.Text;
+    socialItems: Attribute.Component<'general.social-items', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer-section.footer-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer-section.footer-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHeaderSectionHeaderSection extends Schema.SingleType {
   collectionName: 'header_sections';
   info: {
@@ -854,7 +886,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'cards.hero-section',
         'cards.tab-section',
         'cards.resources-section',
-        'cards.technology-section'
+        'cards.technology-section',
+        'cards.testimonials-section'
       ]
     >;
     slug: Attribute.UID;
@@ -864,39 +897,6 @@ export interface ApiPagePage extends Schema.CollectionType {
     createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiResourceResource extends Schema.CollectionType {
-  collectionName: 'resources';
-  info: {
-    singularName: 'resource';
-    pluralName: 'resources';
-    displayName: 'resource';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    shortName: Attribute.String;
-    contentSection: Attribute.DynamicZone<['cards.resources-section']>;
-    slug: Attribute.UID;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::resource.resource',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::resource.resource',
-      'oneToOne',
-      'admin::user'
-    > &
       Attribute.Private;
   };
 }
@@ -956,9 +956,9 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::artical.artical': ApiArticalArtical;
+      'api::footer-section.footer-section': ApiFooterSectionFooterSection;
       'api::header-section.header-section': ApiHeaderSectionHeaderSection;
       'api::page.page': ApiPagePage;
-      'api::resource.resource': ApiResourceResource;
       'api::resources-item.resources-item': ApiResourcesItemResourcesItem;
     }
   }

@@ -47,6 +47,17 @@ export interface CardsTechnologySection extends Schema.Component {
   };
 }
 
+export interface CardsTestimonialsSection extends Schema.Component {
+  collectionName: 'components_cards_testimonials_sections';
+  info: {
+    displayName: 'Testimonials Section';
+    description: '';
+  };
+  attributes: {
+    testimonialsitems: Attribute.Component<'general.testimonials-items', true>;
+  };
+}
+
 export interface GeneralBlogItems extends Schema.Component {
   collectionName: 'components_general_blog_items';
   info: {
@@ -131,6 +142,18 @@ export interface GeneralSectionItems extends Schema.Component {
   };
 }
 
+export interface GeneralSocialItems extends Schema.Component {
+  collectionName: 'components_general_social_items';
+  info: {
+    displayName: 'Social Items';
+    description: '';
+  };
+  attributes: {
+    image: Attribute.Media;
+    link: Attribute.String;
+  };
+}
+
 export interface GeneralTabsItems extends Schema.Component {
   collectionName: 'components_general_tabs_items';
   info: {
@@ -143,6 +166,21 @@ export interface GeneralTabsItems extends Schema.Component {
   };
 }
 
+export interface GeneralTestimonialsItems extends Schema.Component {
+  collectionName: 'components_general_testimonials_items';
+  info: {
+    displayName: 'Testimonials Items';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    name: Attribute.String;
+    position: Attribute.String;
+    image: Attribute.Media;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -150,13 +188,16 @@ declare module '@strapi/types' {
       'cards.resources-section': CardsResourcesSection;
       'cards.tab-section': CardsTabSection;
       'cards.technology-section': CardsTechnologySection;
+      'cards.testimonials-section': CardsTestimonialsSection;
       'general.blog-items': GeneralBlogItems;
       'general.button': GeneralButton;
       'general.date-items': GeneralDateItems;
       'general.head': GeneralHead;
       'general.resource-items': GeneralResourceItems;
       'general.section-items': GeneralSectionItems;
+      'general.social-items': GeneralSocialItems;
       'general.tabs-items': GeneralTabsItems;
+      'general.testimonials-items': GeneralTestimonialsItems;
     }
   }
 }

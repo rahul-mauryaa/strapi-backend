@@ -21,7 +21,8 @@
         "cards.hero-section",
         "cards.tab-section",
         "cards.resources-section",
-        "cards.technology-section"
+        "cards.technology-section",
+        "cards.testimonials-section"
       ]
     },
     "slug": {

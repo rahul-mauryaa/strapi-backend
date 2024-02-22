@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_sections",
+  "info": {
+    "singularName": "footer-section",
+    "pluralName": "footer-sections",
+    "displayName": "Footer Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "socialItems": {
+      "displayName": "Social Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.social-items"
+    }
+  }
+}
