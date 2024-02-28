@@ -1,15 +1,14 @@
-
-export default {
-  //
+module.exports = {
   graphql: {
     config: {
       endpoint: '/graphql',
       shadowCRUD: true,
-      playgroundAlways: false,
-      defaultLimit: 10,
-      maxLimit: 20,
+      playgroundAlways: true,
+      depthLimit: 10,
+      amountLimit: 100,
       apolloServer: {
-        tracing: true,
+        tracing: false,
+        introspection: true,
       },
     },
   },
