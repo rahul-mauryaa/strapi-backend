@@ -6,10 +6,10 @@ export default {
       endpoint: '/graphql',
       shadowCRUD: true,
       playgroundAlways: false,
-      // depthLimit: 7,
-      amountLimit: 100,
+      defaultLimit: 10,
+      maxLimit: 20,
       apolloServer: {
-        tracing: false,
+        tracing: true,
       },
     },
   },
