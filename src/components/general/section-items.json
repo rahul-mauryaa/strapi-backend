@@ -23,9 +23,6 @@
         "audios"
       ]
     },
-    "redirectTo": {
-      "type": "string"
-    },
     "subtitle": {
       "type": "string"
     }
