@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_cards_over_services_sections",
+  "info": {
+    "displayName": "OverServices Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "btn_text1": {
+      "type": "string"
+    },
+    "btn_url1": {
+      "type": "string"
+    },
+    "testimonialsitems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.section-items1"
+    }
+  }
+}
