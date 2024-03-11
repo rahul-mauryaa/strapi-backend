@@ -6,6 +6,11 @@
   },
   "options": {},
   "attributes": {
+    "Head": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.tabs-items"
+    },
     "tabsItems": {
       "type": "component",
       "repeatable": true,
