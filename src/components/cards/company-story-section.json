@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_cards_company_story_sections",
+  "info": {
+    "displayName": "CompanyStory Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "btn_text1": {
+      "type": "string"
+    },
+    "btn_url1": {
+      "type": "string"
+    },
+    "btn_text2": {
+      "type": "string"
+    },
+    "btn_url2": {
+      "type": "string"
+    }
+  }
+}
