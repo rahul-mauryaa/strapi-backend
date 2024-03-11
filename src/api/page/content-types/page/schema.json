@@ -22,7 +22,11 @@
         "cards.tab-section",
         "cards.resources-section",
         "cards.technology-section",
-        "cards.testimonials-section"
+        "cards.testimonials-section",
+        "cards.company-story-section",
+        "cards.over-services-section",
+        "cards.company-number-section",
+        "cards.testimonials-section1"
       ]
     },
     "slug": {
