@@ -15,14 +15,9 @@
     "mainTitle": {
       "type": "string"
     },
-    "details": {
-      "type": "component",
-      "repeatable": true,
-      "component": "general.tabs-items"
-    },
     "image": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
@@ -33,6 +28,12 @@
     },
     "slug": {
       "type": "uid"
+    },
+    "details": {
+      "displayName": "details",
+      "type": "component",
+      "repeatable": true,
+      "component": "general.details"
     }
   }
 }
