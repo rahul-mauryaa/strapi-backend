@@ -1,14 +1,15 @@
 {
-  "collectionName": "components_cards_testimonials_section1s",
+  "collectionName": "components_cards_testimonials_sections",
   "info": {
-    "displayName": "Testimonials Section1"
+    "displayName": "Testimonials Section",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "testimonialsitems": {
       "type": "component",
       "repeatable": true,
-      "component": "general.section-items1"
+      "component": "general.testimonials-items"
     }
   }
 }
