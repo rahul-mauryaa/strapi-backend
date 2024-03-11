@@ -11,6 +11,19 @@
     },
     "description": {
       "type": "text"
+    },
+    "commonimagetoggle": {
+      "type": "boolean"
+    },
+    "commonImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
