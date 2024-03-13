@@ -781,9 +781,9 @@ export interface ApiArticalArtical extends Schema.CollectionType {
   };
   attributes: {
     mainTitle: Attribute.String;
-    details: Attribute.Component<'general.tabs-items', true>;
     image: Attribute.Media;
     slug: Attribute.UID;
+    details: Attribute.Component<'general.details', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -887,7 +887,11 @@ export interface ApiPagePage extends Schema.CollectionType {
         'cards.tab-section',
         'cards.resources-section',
         'cards.technology-section',
-        'cards.testimonials-section'
+        'cards.testimonials-section',
+        'cards.company-story-section',
+        'cards.over-services-section',
+        'cards.company-number-section',
+        'cards.testimonials-section1'
       ]
     >;
     slug: Attribute.UID;

@@ -6,15 +6,15 @@
   },
   "options": {},
   "attributes": {
-    "head": {
-      "type": "component",
-      "repeatable": false,
-      "component": "general.tabs-items"
-    },
     "section": {
       "type": "component",
       "repeatable": true,
       "component": "general.section-items"
+    },
+    "head": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.details"
     }
   }
 }
