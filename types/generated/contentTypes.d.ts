@@ -834,6 +834,36 @@ export interface ApiFooterSectionFooterSection extends Schema.SingleType {
   };
 }
 
+export interface ApiHeaderHeader extends Schema.SingleType {
+  collectionName: 'headers';
+  info: {
+    singularName: 'header';
+    pluralName: 'headers';
+    displayName: 'Header';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    demo: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHeaderSectionHeaderSection extends Schema.SingleType {
   collectionName: 'header_sections';
   info: {
@@ -961,6 +991,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::artical.artical': ApiArticalArtical;
       'api::footer-section.footer-section': ApiFooterSectionFooterSection;
+      'api::header.header': ApiHeaderHeader;
       'api::header-section.header-section': ApiHeaderSectionHeaderSection;
       'api::page.page': ApiPagePage;
       'api::resources-item.resources-item': ApiResourcesItemResourcesItem;
